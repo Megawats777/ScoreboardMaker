@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Scoreboard Maker - Display</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="ScoreboardLogic.js"></script>
+</head>
+
+<body onload="initialize()">
+
+    <div class="TitleSection">
+        <div class="row">
+
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
+                <h1>Scoreboard Title</h1>
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="TeamTitles">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h3>Team 1</h3>
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
+                <h3>Team 2</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ScoreElements">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h3 id="Team1Score">00</h3>
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
+                <h3 id="Team2Score">00</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ScoreAdjustmentButtons">
+        <div class="row">
+
+            <div class="col-md-4">
+                <button onclick="increaseTeamScoreValues(1)">+</button>
+                <button>-</button>
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4">
+                <button onclick="increaseTeamScoreValues(2)">+</button>
+                <button>-</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
