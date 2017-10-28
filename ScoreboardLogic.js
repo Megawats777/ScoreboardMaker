@@ -65,9 +65,25 @@ function increaseTeamScoreValues(teamSelected)
         // Increase the team 1 score value
         if (team1Score < 999)
         {
-            team1Score += teamScoreIncreaseInterval;
-            team1ScoreText.innerHTML = team1Score;
+            if ((team1Score + teamScoreIncreaseInterval) >= 999)
+            {
+                team1Score = 999;
+            }
+
+            else
+            {
+                team1Score += teamScoreIncreaseInterval;
+            }
         }
+        
+        // If the team 1 score value is equal or greater than 999
+        // Set the team 1 score value to be 999
+        else if (team1Score >= 999)
+        {
+            team1Score = 999;
+        } 
+
+        team1ScoreText.innerHTML = team1Score;
     }
 
     else if (teamSelected === 2)
@@ -76,9 +92,25 @@ function increaseTeamScoreValues(teamSelected)
         // Increase the team 2 score value
         if (team2Score < 999)
         {
-            team2Score += teamScoreIncreaseInterval;
-            team2ScoreText.innerHTML = team2Score;
+            if ((team2Score + teamScoreIncreaseInterval) >= 999)
+            {
+                team2Score = 999;
+            }
+            
+            else
+            {
+                team2Score += teamScoreIncreaseInterval;
+            }
         }
+
+        // If the team 2 score value is equal or greater than 999
+        // Set the team 2 score value to be 999
+        else if (team2Score >= 999)
+        {
+            team2Score = 999;
+        } 
+
+        team2ScoreText.innerHTML = team2Score;
     }
 
     else
@@ -97,9 +129,25 @@ function decreaseTeamScoreValues(teamSelected)
         // Decrease the team 1 score value
         if (team1Score > -999)
         {
-            team1Score -= teamScoreDecreaseInterval;
-            team1ScoreText.innerHTML = team1Score;
+            if ((team1Score - teamScoreDecreaseInterval) <= -999)
+            {
+                team1Score = -999;
+            }
+
+            else
+            {
+                team1Score -= teamScoreDecreaseInterval;
+            }
         }
+
+        // If the team 1 score value is equal or less than -999
+        // Set the team 1 score value to be -999
+        else if (team1Score <= -999)
+        {
+            team1Score = -999;
+        }
+
+        team1ScoreText.innerHTML = team1Score;
     }
 
     else if (teamSelected === 2)
@@ -108,9 +156,25 @@ function decreaseTeamScoreValues(teamSelected)
         // Decrease the team 2 score value
         if (team2Score > -999)
         {
-            team2Score -= teamScoreDecreaseInterval;
-            team2ScoreText.innerHTML = team2Score;
+            if ((team2Score - teamScoreDecreaseInterval) <= -999)
+            {
+                team2Score = -999;
+            }
+
+            else
+            {
+                team2Score -= teamScoreDecreaseInterval;
+            }
         }
+
+        // If the team 2 score value is equal or less than -999
+        // Set the team 2 score value to be -999
+        else if (team2Score <= -999)
+        {
+            team2Score = -999;
+        }
+
+        team2ScoreText.innerHTML = team2Score;
     }
 
     else
