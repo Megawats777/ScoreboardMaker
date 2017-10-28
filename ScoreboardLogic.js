@@ -2,9 +2,16 @@
 var team1Score = 0;
 var team2Score = 0;
 
+
+// Team score increase/decrease interval values
+var teamScoreIncreaseInterval = 1;
+var teamScoreDecreaseInterval = 1;
+
+
 // Team score text elements
 var team1ScoreText;
 var team2ScoreText;
+
 
 // Score adjustment buttons
 // Element 0 = Team 1 button
@@ -58,7 +65,7 @@ function increaseTeamScoreValues(teamSelected)
         // Increase the team 1 score value
         if (team1Score < 999)
         {
-            team1Score++;
+            team1Score += teamScoreIncreaseInterval;
             team1ScoreText.innerHTML = team1Score;
         }
     }
@@ -69,7 +76,7 @@ function increaseTeamScoreValues(teamSelected)
         // Increase the team 2 score value
         if (team2Score < 999)
         {
-            team2Score++;
+            team2Score += teamScoreIncreaseInterval;
             team2ScoreText.innerHTML = team2Score;
         }
     }
@@ -90,7 +97,7 @@ function decreaseTeamScoreValues(teamSelected)
         // Decrease the team 1 score value
         if (team1Score > -999)
         {
-            team1Score--;
+            team1Score -= teamScoreDecreaseInterval;
             team1ScoreText.innerHTML = team1Score;
         }
     }
@@ -101,7 +108,7 @@ function decreaseTeamScoreValues(teamSelected)
         // Decrease the team 2 score value
         if (team2Score > -999)
         {
-            team2Score--;
+            team2Score -= teamScoreDecreaseInterval;
             team2ScoreText.innerHTML = team2Score;
         }
     }
