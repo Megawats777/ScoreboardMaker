@@ -1,16 +1,24 @@
 .TitleSection
 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
 .TeamTitles
 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
 .ScoreElements
 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+.ScoreElements p
+{
+    font-size: 25px;
 }
 
 .ScoreAdjustmentButtons
@@ -20,5 +28,11 @@
 
 .ResetScoreValueSection
 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+.ResetScoreValueSection button
+{
+    font-size: 20px;
 }
