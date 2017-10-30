@@ -8,6 +8,12 @@ var teamScoreIncreaseInterval = 1;
 var teamScoreDecreaseInterval = 1;
 
 
+// Editor status variables
+var isEditorVisible = false;
+
+
+/*--Document element references--*/
+
 // Team score text elements
 var team1ScoreText;
 var team2ScoreText;
@@ -20,13 +26,25 @@ var scoreIncreaseButtons = new Array(2);
 var scoreDecreaseButtons = new Array(2);
 var resetScoreValueButton;
 
+// Overhead buttons
+var customizeButton;
+
+
+// The editor panel
+var editorPanel;
+
+
 // Initialize the page
 function initialize() {
+
     // Get document references
     getDocumentReferences();
 
     // Bind function calls
     bindFunctionCalls();
+
+    // Hide the editor
+    hideEditor();
 }
 
 // Get document references
@@ -43,6 +61,14 @@ function getDocumentReferences() {
     scoreDecreaseButtons[1] = document.getElementById("Team2ScoreDecreaseButton");
 
     resetScoreValueButton = document.getElementById("ResetScoreValueButton");
+
+
+    // Get the overhead buttons
+    customizeButton = document.getElementById("CustomizeButton");
+
+
+    // Get the editor panel
+    editorPanel = document.getElementById("EditorPanel");
 }
 
 // Bind function calls
@@ -56,6 +82,10 @@ function bindFunctionCalls() {
     scoreDecreaseButtons[1].addEventListener("click", function () { decreaseTeamScoreValues(2); });
 
     resetScoreValueButton.addEventListener("click", function () { resetTeamScoreValues(); });
+
+
+    // Bind functions to the overhead buttons
+    customizeButton.addEventListener("click", function() { toggleEditorVisibility(); });
 }
 
 // Increase team score values
@@ -198,4 +228,38 @@ function updateTeamScoreDisplayElements(selectedTeam) {
             console.log("Invalid Team Selected");
             break;
     }
+}
+
+// Toggle the visiblity of the editor
+function toggleEditorVisibility()
+{
+    // If the editor is visible
+    // Hide the editor
+    if (isEditorVisible === true)
+    {
+        hideEditor();
+        customizeButton.innerHTML = "Customize";
+        isEditorVisible = false;
+    }
+
+    // If the editor is not visible
+    // Show the editor
+    else if (isEditorVisible === false)
+    {
+        showEditor();
+        customizeButton.innerHTML = "Hide Customize Menu";
+        isEditorVisible = true;
+    }
+}
+
+// Hide the editor
+function hideEditor()
+{
+    editorPanel.style.bottom = "-500px";
+}
+
+// Show the editor
+function showEditor()
+{
+    editorPanel.style.bottom = "0px";
 }
