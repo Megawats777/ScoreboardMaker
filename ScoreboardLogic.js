@@ -44,7 +44,9 @@ function initialize() {
     bindFunctionCalls();
 
     // Hide the editor
-    hideEditor();
+    //hideEditor();
+
+    showEditor();
 }
 
 // Get document references
