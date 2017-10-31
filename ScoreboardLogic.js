@@ -39,7 +39,7 @@ var editorPanel;
 window.onload = function(){
     initialize();
     EDITOR_initialize();
-}
+};
 
 
 // Initialize the page
@@ -83,6 +83,9 @@ function getDocumentReferences() {
 
 // Bind function calls
 function bindFunctionCalls() {
+
+if (scoreIncreaseButtons[0] == null)
+    alert("Help");
 
     // Bind functions to the score adjustment buttons
     scoreIncreaseButtons[0].addEventListener("click", function () { increaseTeamScoreValues(1); });

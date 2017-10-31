@@ -8,14 +8,14 @@ var team2TitleInput;
 function EDITOR_initialize()
 {
     // Get document references
-    getDocumentReferences();
+    EDITOR_getDocumentReferences();
     
     // Bind functions
     EDITOR_bindFunctionCalls();
 }
 
 // Get document references
-function getDocumentReferences()
+function EDITOR_getDocumentReferences()
 {
     // Get the title control elements
     scoreboardTitleInput = document.getElementById("ScoreboardTitleInput");
@@ -26,5 +26,10 @@ function getDocumentReferences()
 // Bind functions
 function EDITOR_bindFunctionCalls()
 {
+    scoreboardTitleInput.oninput = function() {test()};
+}
 
+function test()
+{
+    alert("Test");
 }
