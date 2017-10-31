@@ -35,10 +35,8 @@ var editorPanel;
 
 // When the page loads
 // Call the initialize function
-// Initialize the editor logic script
 window.onload = function(){
     initialize();
-    EDITOR_initialize();
 };
 
 
@@ -55,6 +53,9 @@ function initialize() {
     //hideEditor();
 
     showEditor();
+
+    // Initialize the editor logic script
+    EDITOR_initialize();
 }
 
 // Get document references
