@@ -2,7 +2,15 @@
 
 .OverheadButtons
 {
+    padding-top: 15px;
+
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.OverheadButtons button
+{
+    font-size: 15px;
 }
 
 .TitleSection
