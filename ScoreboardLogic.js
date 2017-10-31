@@ -33,6 +33,14 @@ var customizeButton;
 // The editor panel
 var editorPanel;
 
+// When the page loads
+// Call the initialize function
+// Initialize the editor logic script
+window.onload = function(){
+    initialize();
+    EDITOR_initialize();
+}
+
 
 // Initialize the page
 function initialize() {
