@@ -1,0 +1,17 @@
+.EditorSection
+{
+
+}
+
+.EditorSection #EditorTitle
+{
+    font-weight: bold;
+    text-align: center;
+
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    border-bottom: 2px solid black;
+}
