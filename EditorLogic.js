@@ -31,5 +31,5 @@ function EDITOR_bindFunctionCalls()
 
 function test()
 {
-    alert("Test");
+    console.log("Editing...");
 }
