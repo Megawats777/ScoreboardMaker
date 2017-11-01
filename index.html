@@ -12,7 +12,7 @@
     <script src="EditorLogic.js"></script>
 </head>
 
-<body onload="initialize();" style="overflow-x: hidden;">
+<body style="overflow-x: hidden;">
 
     <div class="OverheadButtons">
         <div class="row">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-md-4">
-                <h1>Scoreboard Title</h1>
+                <h1 id="ScoreboardTitle">Scoreboard Title</h1>
             </div>
 
             <div class="col-md-4">
@@ -52,7 +52,7 @@
         <div class="row">
 
             <div class="col-md-4">
-                <h3>Team 1</h3>
+                <h3 id="Team1Title">Team 1</h3>
 
                 <div class="ScoreElements">
                     <p id="Team1Score">0</p>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="col-md-4">
-                <h3>Team 2</h3>
+                <h3 id="Team2Title">Team 2</h3>
 
                 <div class="ScoreElements">
                     <p id="Team2Score">0</p>
@@ -112,13 +112,13 @@
                 <div class="row">
                     <div class="col-md-4">
                         <h5>Scoreboard Title</h5>
-                        <input id="ScoreboardTitleInput" class="form-control" type="text" value="Title" maxlength="25" onclick="this.select();">
+                        <input id="ScoreboardTitleInput" class="form-control" type="text" value="Title" maxlength="80" onclick="this.select();">
                     
                         <h5>Team 1 Title</h5>
-                        <input id="Team1TitleInput" class="form-control" type="text" value="Team 1" maxlength="25" onclick="this.select();">
+                        <input id="Team1TitleInput" class="form-control" type="text" value="Team 1" maxlength="80" onclick="this.select();">
                     
                         <h5>Team 2 Title</h5>
-                        <input id="Team2TitleInput" class="form-control" type="text" value="Team 2" maxlength="25" onclick="this.select();">
+                        <input id="Team2TitleInput" class="form-control" type="text" value="Team 2" maxlength="80" onclick="this.select();">
                     
                     </div>
 
