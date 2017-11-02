@@ -55,23 +55,3 @@
 }
 
 /*---Scoreboard Content Styling End---*/
-
-
-/*---Editor Content Styling---*/
-
-.EditorSection
-{
-    position: fixed;
-    z-index: 99;
-
-    box-shadow: 0px -2px 5px 5px rgba(0, 0, 0, 0.9);
-    background-color: white;
-
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 100%;
-    bottom: 0px;
-    height: 250px;
-}
-
-/*---Editor Content Styling End---*/
