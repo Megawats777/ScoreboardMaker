@@ -53,9 +53,9 @@ function initialize() {
     bindFunctionCalls();
 
     // Hide the editor
-    hideEditor();
+    // hideEditor();
 
-    //showEditor();
+    showEditor();
 
     
 }

@@ -1,0 +1,8 @@
+Oswald Font:
+font-family: 'Oswald', sans-serif;
+
+Open Sans Font:
+font-family: 'Open Sans', sans-serif;
+
+Saira Semi Condensed Font:
+font-family: 'Saira Semi Condensed', sans-serif;
