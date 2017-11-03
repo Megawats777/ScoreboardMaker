@@ -14,6 +14,7 @@ var isEditorVisible = false;
 
 /*--Document element references--*/
 
+
 // Team score text elements
 var team1ScoreText;
 var team2ScoreText;

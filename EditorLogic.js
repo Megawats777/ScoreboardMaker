@@ -84,7 +84,9 @@ function EDITOR_bindFunctionCalls() {
 
     // Bind functions to the font controls
     EDITOR_scoreboardTitleFontControl.onchange = function () { EDITOR_applyFontChanges(); };
-
+    EDITOR_scoreFontControl.onchange = function () { EDITOR_applyFontChanges(); };
+    EDITOR_team1FontControl.onchange = function () { EDITOR_applyFontChanges(); };
+    EDITOR_team2FontControl.onchange = function () { EDITOR_applyFontChanges(); };
 }
 
 // Apply changes to title display elements
@@ -100,18 +102,43 @@ function EDITOR_applyFontChanges() {
 
     // Check for what font was selected for the scoreboard title
     // Depending on the selected option set the font of that title
-    switch (EDITOR_scoreboardTitleFontControl.selectedIndex) {
-        
+    setTextFontFromDropdownList(EDITOR_scoreboardTitleFontControl.selectedIndex, EDITOR_scoreboardTitleDisplay);
+
+
+    // Check for what font was selected for the score text elements
+    // Depending on the selected option set the font of that title
+    setTextFontFromDropdownList(EDITOR_scoreFontControl.selectedIndex, team1ScoreText);
+    setTextFontFromDropdownList(EDITOR_scoreFontControl.selectedIndex, team2ScoreText);
+
+
+    // Check for what font was selected for the team title elements
+    // Depending on the selected option set the font of that title
+    setTextFontFromDropdownList(EDITOR_team1FontControl.selectedIndex, EDITOR_team1TitleDisplay);
+    setTextFontFromDropdownList(EDITOR_team2FontControl.selectedIndex, EDITOR_team2TitleDisplay);
+}
+
+// Set the font for text elements based on dropdowns
+// PARAM 1: The font selection num from the dropdown lists
+// PARAM 2: The text element to be edited
+function setTextFontFromDropdownList(selectionNum, editedTextElement) {
+
+    switch (selectionNum) {
+
         case 0:
-            EDITOR_scoreboardTitleDisplay.style.fontFamily = "Oswald, sans-serif";
+            editedTextElement.style.fontFamily = "Oswald, sans-serif";
             break;
 
         case 1:
-            EDITOR_scoreboardTitleDisplay.style.fontFamily = "Open Sans, sans-serif";
+            editedTextElement.style.fontFamily = "Open Sans, sans-serif";
             break;
 
         case 2:
-            EDITOR_scoreboardTitleDisplay.style.fontFamily = "Saira Semi Condensed, sans-serif";
+            editedTextElement.style.fontFamily = "Saira Semi Condensed, sans-serif";
+            break;
+
+        default:
+            editedTextElement.style.fontFamily = "Oswald, sans-serif";
             break;
     }
+
 }
