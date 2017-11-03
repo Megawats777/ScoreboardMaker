@@ -14,6 +14,18 @@ var EDITOR_team2TitleDisplay;
 
 /*--Title elements category end--*/
 
+
+
+/*--Font Control Properties--*/
+
+// Font style identifiers
+var EDITOR_OswaldFontID = "Oswald, sans-serif";
+var EDITOR_OpenSansFontID = "Open Sans, sans-serif";
+var EDITOR_SairaSemiCondensedFontID = "Saira Semi Condensed, sans-serif";
+
+
+/*--Font Control Properties End--*/
+
 // Initialize the editor
 function EDITOR_initialize() {
 
@@ -29,7 +41,7 @@ function EDITOR_initialize() {
 
 // Get document references
 function EDITOR_getDocumentReferences() {
-    
+
     // Get the title control elements
     EDITOR_scoreboardTitleInput = document.getElementById("ScoreboardTitleInput");
     EDITOR_team1TitleInput = document.getElementById("Team1TitleInput");
@@ -42,8 +54,8 @@ function EDITOR_getDocumentReferences() {
 }
 
 // Set the default values for the controls
-function EDITOR_setDefaultControlValues()
-{
+function EDITOR_setDefaultControlValues() {
+
     // Set the default values for the title control elements
     EDITOR_scoreboardTitleInput.value = EDITOR_scoreboardTitleDisplay.innerHTML;
     EDITOR_team1TitleInput.value = EDITOR_team1TitleDisplay.innerHTML;
@@ -52,16 +64,16 @@ function EDITOR_setDefaultControlValues()
 
 // Bind functions
 function EDITOR_bindFunctionCalls() {
-    
+
     // Bind functions to the title controls
     EDITOR_scoreboardTitleInput.oninput = function () { EDITOR_applyTitleDisplayChanges(); };
     EDITOR_team1TitleInput.oninput = function () { EDITOR_applyTitleDisplayChanges(); };
-    EDITOR_team2TitleInput.oninput = function() {EDITOR_applyTitleDisplayChanges(); };
+    EDITOR_team2TitleInput.oninput = function () { EDITOR_applyTitleDisplayChanges(); };
 }
 
 // Apply changes to title display elements
 function EDITOR_applyTitleDisplayChanges() {
-    
+
     EDITOR_scoreboardTitleDisplay.innerHTML = EDITOR_scoreboardTitleInput.value;
     EDITOR_team1TitleDisplay.innerHTML = EDITOR_team1TitleInput.value;
     EDITOR_team2TitleDisplay.innerHTML = EDITOR_team2TitleInput.value;
