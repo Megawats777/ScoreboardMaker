@@ -30,28 +30,38 @@
 
 .TeamTitles .Team1Elements
 {
-    padding-left: 200px;
+    
 }
 
 .TeamTitles .Team2Elements
 {
-    padding-right: 200px;
+    
 }
 
 .ScoreElements
 {
     font-family: 'Oswald', sans-serif;
-    text-align: center;
 }
 
 .ScoreElements p
 {
     font-size: 220px;
+    text-align: center;
 }
 
 .ScoreAdjustmentButtons
 {
     text-align: center;
+}
+
+.ScoreAdjustmentButtons button
+{
+    font-size: 18px;
+}
+
+.ScoreAdjustmentButtons .ScoreIncreaseButton
+{
+    margin-right: 8px;
 }
 
 .ResetScoreValueSection
