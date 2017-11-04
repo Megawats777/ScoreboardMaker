@@ -21,8 +21,21 @@
 
 .TeamTitles
 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+.TeamTitles .Team1Elements
+{
+    padding-left: 200px;
+}
+
+.TeamTitles .Team2Elements
+{
+    padding-right: 200px;
 }
 
 .ScoreElements
@@ -33,7 +46,7 @@
 
 .ScoreElements p
 {
-    font-size: 25px;
+    font-size: 220px;
 }
 
 .ScoreAdjustmentButtons
