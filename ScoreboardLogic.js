@@ -56,7 +56,7 @@ function initialize() {
     // Hide the editor
     hideEditor();
 
-    // showEditor();
+    showEditor();
 
     
 }

@@ -15,10 +15,12 @@
 
 .EditorSection #EditorTitle
 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
 
     padding-top: 5px;
+    padding-bottom: 5px;
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 2px;
@@ -28,11 +30,24 @@
 
 .EditorSection .ControlSections
 {
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 
+    padding-left: 20px;
     padding-bottom: 50px;
+}
+
+.EditorSection .ControlSections .ToolSection
+{
+    padding-bottom: 20px;
+}
+
+.EditorSection .ControlSections .Controls
+{
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
