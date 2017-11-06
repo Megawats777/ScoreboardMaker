@@ -1,3 +1,8 @@
+// Team title div section reference and properties
+var teamTitleDivRef;
+var teamTitleDivDefaultTopPaddingValue;
+var teamTitleDivSmallerTopPaddingValue = 2.5;
+
 // The team score values
 var team1Score = 0;
 var team2Score = 0;
@@ -36,8 +41,8 @@ var resetScoreValueButton;
 var customizeButton;
 
 
-// The editor panel
-var editorPanel;
+// Editor panel properties
+var editorPanelRef;
 
 // When the page loads
 // Call the initialize function
@@ -70,6 +75,10 @@ function initialize() {
     styleSheetFontSize = window.getComputedStyle(team2ScoreText, null).getPropertyValue("font-size");
     team2ScoreTextDefaultFontSize = parseFloat(styleSheetFontSize);
 
+
+    // Set the default top padding value for the team title div reference
+    var styleSheetTopPaddingVal = window.getComputedStyle(teamTitleDivRef, null).getPropertyValue("padding-top");
+    teamTitleDivDefaultTopPaddingValue = parseFloat(styleSheetTopPaddingVal);
 }
 
 // Get document references
@@ -93,7 +102,10 @@ function getDocumentReferences() {
 
 
     // Get the editor panel
-    editorPanel = document.getElementById("EditorPanel");
+    editorPanelRef = document.getElementById("EditorPanel");
+
+    // Get the team title div reference
+    teamTitleDivRef = document.getElementById("TeamTitles");
 }
 
 // Bind function calls
@@ -280,19 +292,27 @@ function toggleEditorVisibility()
 // Hide the editor
 function hideEditor()
 {
-    editorPanel.style.bottom = "-500px";
+    editorPanelRef.style.bottom = "-500px";
 
     // Set the size of the team score elements to be their default values
     team1ScoreText.style.fontSize = team1ScoreTextDefaultFontSize + "px";
     team2ScoreText.style.fontSize = team2ScoreTextDefaultFontSize + "px";
+
+    // Set the top padding val of the team title div ref to be
+    // the smaller value
+    teamTitleDivRef.style.paddingTop = teamTitleDivDefaultTopPaddingValue + "px";
 }
 
 // Show the editor
 function showEditor()
 {
-    editorPanel.style.bottom = "0px";
+    editorPanelRef.style.bottom = "0px";
 
     // Set the size of the team score elements to be their smaller values
     team1ScoreText.style.fontSize = team1ScoreTextSmallerFontSize + "px";
     team2ScoreText.style.fontSize = team2ScoreTextSmallerFontSize + "px";
+
+    // Set the top padding val of the team title div ref to be
+    // the smaller value
+    teamTitleDivRef.style.paddingTop = teamTitleDivSmallerTopPaddingValue + "px";
 }
