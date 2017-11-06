@@ -19,6 +19,11 @@ var isEditorVisible = false;
 var team1ScoreText;
 var team2ScoreText;
 
+var team1ScoreTextDefaultFontSize;
+var team1ScoreTextSmallerFontSize = 120;
+
+var team2ScoreTextDefaultFontSize;
+var team2ScoreTextSmallerFontSize = 120;
 
 // Score adjustment buttons
 // Element 0 = Team 1 button
@@ -56,9 +61,15 @@ function initialize() {
     // Hide the editor
     hideEditor();
 
-    showEditor();
+    // showEditor();
 
-    
+    // Set the default font size for the score text elements
+    var styleSheetFontSize = window.getComputedStyle(team1ScoreText, null).getPropertyValue("font-size");
+    team1ScoreTextDefaultFontSize = parseFloat(styleSheetFontSize);
+
+    styleSheetFontSize = window.getComputedStyle(team2ScoreText, null).getPropertyValue("font-size");
+    team2ScoreTextDefaultFontSize = parseFloat(styleSheetFontSize);
+
 }
 
 // Get document references
@@ -87,9 +98,6 @@ function getDocumentReferences() {
 
 // Bind function calls
 function bindFunctionCalls() {
-
-if (scoreIncreaseButtons[0] == null)
-    alert("Help");
 
     // Bind functions to the score adjustment buttons
     scoreIncreaseButtons[0].addEventListener("click", function () { increaseTeamScoreValues(1); });
@@ -273,10 +281,18 @@ function toggleEditorVisibility()
 function hideEditor()
 {
     editorPanel.style.bottom = "-500px";
+
+    // Set the size of the team score elements to be their default values
+    team1ScoreText.style.fontSize = team1ScoreTextDefaultFontSize + "px";
+    team2ScoreText.style.fontSize = team2ScoreTextDefaultFontSize + "px";
 }
 
 // Show the editor
 function showEditor()
 {
     editorPanel.style.bottom = "0px";
+
+    // Set the size of the team score elements to be their smaller values
+    team1ScoreText.style.fontSize = team1ScoreTextSmallerFontSize + "px";
+    team2ScoreText.style.fontSize = team2ScoreTextSmallerFontSize + "px";
 }
