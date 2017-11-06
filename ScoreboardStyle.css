@@ -7,13 +7,25 @@
 
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+
+    border-bottom: 1px solid black;
 }
 
 .OverheadButtons button
 {
     border-radius: 2px;
+    border-color: black;
 
     font-size: 15px;
+
+    background-color: white;
+    color: black;
+}
+
+.OverheadButtons button:hover
+{
+    background-color: #424242;
+    color: white;
 }
 
 .TitleSection
