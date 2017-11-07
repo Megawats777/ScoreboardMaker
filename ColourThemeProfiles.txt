@@ -1,16 +1,19 @@
 // To be used as a reference for colour themes
 
 Theme: Light
+    ID: 0
     Background Colour: White
     Text Colour: Black
     Button Border Colour: Black
 
 Theme: Dark
+    ID: 1
     Background Colour: Black
     Text Colour: White
     Button Border Colour: White
 
 Theme: Amber
+    ID: 2
     Background Colour: Black to orange gradient
     Text Colour: White
     Button Border Colour: White
