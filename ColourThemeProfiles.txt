@@ -1,0 +1,16 @@
+// To be used as a reference for colour themes
+
+Theme: Light
+    Background Colour: White
+    Text Colour: Black
+    Button Border Colour: Black
+
+Theme: Dark
+    Background Colour: Black
+    Text Colour: White
+    Button Border Colour: White
+
+Theme: Amber
+    Background Colour: Black to orange gradient
+    Text Colour: White
+    Button Border Colour: White
