@@ -181,7 +181,7 @@ function EDITOR_applyColourThemeChanges() {
 
         case 0:
             selectedBackgroundColour = "white";
-            selectedTextColour = "black";
+            selectedTextColour = "rgba(51, 51, 51, 1)";
             selectedButtonBorderColour = "black"
             break;
 

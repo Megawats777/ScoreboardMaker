@@ -39,6 +39,11 @@
     text-align: center;
 }
 
+.ScoreboardContent
+{
+    height: 100vh;
+}
+
 .TeamTitles
 {
     padding-top: 50px;

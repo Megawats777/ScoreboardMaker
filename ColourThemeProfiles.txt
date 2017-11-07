@@ -3,7 +3,7 @@
 Theme: Light
     ID: 0
     Background Colour: White
-    Text Colour: Black
+    Text Colour: rgba(51, 51, 51, 1)
     Button Border Colour: Black
 
 Theme: Dark
