@@ -9,11 +9,11 @@ Theme: Light
 Theme: Dark
     ID: 1
     Background Colour: Black
-    Text Colour: White
+    Text Colour: Blue type colour
     Button Border Colour: White
 
 Theme: Amber
     ID: 2
-    Background Colour: Black to orange gradient
+    Background Colour: Orange type colour
     Text Colour: White
     Button Border Colour: White

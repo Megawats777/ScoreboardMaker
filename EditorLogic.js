@@ -186,15 +186,22 @@ function EDITOR_applyColourThemeChanges() {
             break;
 
         case 1:
-            selectedBackgroundColour = "black";
-            selectedTextColour = "white";
-            selectedButtonBorderColour = "white";
+            selectedBackgroundColour = "rgba(40, 40, 40, 1)";
+            selectedTextColour = "#2196F3";
+            selectedButtonBorderColour = "#2196F3";
             break;
 
         case 2:
-            selectedBackgroundColour = "orange";
-            selectedTextColour = "black";
-            selectedButtonBorderColour = "white";
+            selectedBackgroundColour = "rgba(40, 40, 40, 1)";
+            selectedTextColour = "#F57F17";
+            selectedButtonBorderColour = "#F57F17";
+            break;
+
+        default:
+            selectedBackgroundColour = "white";
+            selectedTextColour = "rgba(51, 51, 51, 1)";
+            selectedButtonBorderColour = "black"
+            break;
     }
 
 
@@ -204,7 +211,7 @@ function EDITOR_applyColourThemeChanges() {
     EDITOR_scoreboardBackgroundRef.style.background = selectedBackgroundColour;
     EDITOR_scoreboardTitleDisplay.style.color = selectedTextColour;
     EDITOR_team1TitleDisplay.style.color = selectedTextColour;
-    EDITOR_team2TitleDisplay.style.color = selectedTextColour;   
+    EDITOR_team2TitleDisplay.style.color = selectedTextColour;
     team1ScoreText.style.color = selectedTextColour;
     team2ScoreText.style.color = selectedTextColour;
 
