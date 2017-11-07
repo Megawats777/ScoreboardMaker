@@ -47,7 +47,10 @@
 
 .EditorSection .ControlSections .Controls
 {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 15px;
 }
-
+.EditorSection .ControlSections .Controls .Tool
+{
+    margin-bottom: 15px;
+}
