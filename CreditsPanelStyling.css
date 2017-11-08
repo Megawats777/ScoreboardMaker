@@ -26,3 +26,14 @@
 
     border-bottom: 2px solid black;
 }
+
+.CreditsSection .CreditsContent
+{
+    line-height: 37px;
+
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+    padding-top: 15px;
+}
