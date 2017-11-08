@@ -45,7 +45,12 @@ var EDITOR_colourThemeControl;
 /*--Appearance Control Properties End-*/
 
 
+/*--Score interval control properties--*/
 
+var EDITOR_scoreIncreaseIntervalControl;
+var EDITOR_scoreDecreaseIntervalControl;
+
+/*--Score interval control properties end--*/
 
 // Initialize the editor
 function EDITOR_initialize() {
@@ -84,6 +89,10 @@ function EDITOR_getDocumentReferences() {
 
     // Get appearance control elements
     EDITOR_colourThemeControl = document.getElementById("ColourThemeControl");
+
+    // Get the score interval control elements
+    EDITOR_scoreIncreaseIntervalControl = document.getElementById("ScoreIncreaseIntervalControl");
+    EDITOR_scoreDecreaseIntervalControl = document.getElementById("ScoreDecreaseIntervalControl");
 }
 
 // Set the default values for the controls
@@ -103,14 +112,21 @@ function EDITOR_bindFunctionCalls() {
     EDITOR_team1TitleInput.oninput = function () { EDITOR_applyTitleDisplayChanges(); };
     EDITOR_team2TitleInput.oninput = function () { EDITOR_applyTitleDisplayChanges(); };
 
+
     // Bind functions to the font controls
     EDITOR_scoreboardTitleFontControl.onchange = function () { EDITOR_applyFontChanges(); };
     EDITOR_scoreFontControl.onchange = function () { EDITOR_applyFontChanges(); };
     EDITOR_team1FontControl.onchange = function () { EDITOR_applyFontChanges(); };
     EDITOR_team2FontControl.onchange = function () { EDITOR_applyFontChanges(); };
 
+
     // Bind functions to the appearance controls
     EDITOR_colourThemeControl.onchange = function () { EDITOR_applyColourThemeChanges(); };
+
+
+    // Bind functions to the score interval controls
+    EDITOR_scoreIncreaseIntervalControl.onchange = function () { EDITOR_applyScoreIntervalChanges(); };
+    EDITOR_scoreDecreaseIntervalControl.onchange = function () { EDITOR_applyScoreIntervalChanges(); };
 }
 
 // Apply changes to title display elements
@@ -179,18 +195,21 @@ function EDITOR_applyColourThemeChanges() {
     // Set the selected background, text, and border button colours
     switch (EDITOR_colourThemeControl.selectedIndex) {
 
+        // Light theme selection
         case 0:
             selectedBackgroundColour = "white";
             selectedTextColour = "rgba(51, 51, 51, 1)";
             selectedButtonBorderColour = "black"
             break;
 
+        // Dark theme selection
         case 1:
             selectedBackgroundColour = "rgba(40, 40, 40, 1)";
             selectedTextColour = "#2196F3";
             selectedButtonBorderColour = "#2196F3";
             break;
 
+        // Amber theme selection
         case 2:
             selectedBackgroundColour = "rgba(40, 40, 40, 1)";
             selectedTextColour = "#F57F17";
@@ -222,4 +241,51 @@ function EDITOR_applyColourThemeChanges() {
     for (var i = 0; i < scoreDecreaseButtons.length; i++) {
         scoreDecreaseButtons[i].style.borderColor = selectedButtonBorderColour;
     }
+}
+
+// Apply score interval changes
+function EDITOR_applyScoreIntervalChanges() {
+
+    // Depending on the selected increase interval rate
+    // Set the score increase rate
+    switch (EDITOR_scoreIncreaseIntervalControl.selectedIndex) {
+
+        case 0:
+            teamScoreIncreaseInterval = 1;
+            break;
+
+        case 1:
+            teamScoreIncreaseInterval = 5;
+            break;
+
+        case 2:
+            teamScoreIncreaseInterval = 10;
+            break;
+
+        default:
+            teamScoreIncreaseInterval = 1;
+            break;
+    }
+
+    // Depending on the selected decrease interval rate
+    // Set the score decrease rate
+    switch (EDITOR_scoreDecreaseIntervalControl.selectedIndex) {
+
+        case 0:
+            teamScoreDecreaseInterval = 1;
+            break;
+
+        case 1:
+            teamScoreDecreaseInterval = 5;
+            break;
+
+        case 2:
+            teamScoreDecreaseInterval = 10;
+            break;
+
+        default:
+            teamScoreDecreaseInterval = 1;
+            break;
+    }
+
 }
