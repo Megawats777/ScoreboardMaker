@@ -1,0 +1,28 @@
+.CreditsSection
+{
+    position: fixed;
+    z-index: 99;
+
+    box-shadow: 0px -3px 7px 5px rgba(0, 0, 0, 0.8);
+    background-color: white;
+
+    overflow: hidden;
+    width: 100%;
+    bottom: 0px;
+    height: 200px;
+}
+
+.CreditsSection #CreditsTitle
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+    padding-top: 2px;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 2px;
+
+    border-bottom: 2px solid black;
+}
