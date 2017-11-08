@@ -51,7 +51,7 @@ var creditsPanelRef;
 
 // When the page loads
 // Call the initialize function
-window.onload = function(){
+window.onload = function () {
     initialize();
 
     // Initialize the editor logic script
@@ -103,7 +103,7 @@ function getDocumentReferences() {
     scoreDecreaseButtons[0] = document.getElementById("Team1ScoreDecreaseButton");
     scoreDecreaseButtons[1] = document.getElementById("Team2ScoreDecreaseButton");
 
-    
+
 
     // Get the overhead buttons
     customizeButton = document.getElementById("CustomizeButton");
@@ -130,19 +130,19 @@ function bindFunctionCalls() {
     scoreDecreaseButtons[0].addEventListener("click", function () { decreaseTeamScoreValues(1); });
     scoreDecreaseButtons[1].addEventListener("click", function () { decreaseTeamScoreValues(2); });
 
-    
+
     // Bind functions to the overhead buttons
-    customizeButton.addEventListener("click", function() { toggleEditorVisibility(); });
+    customizeButton.addEventListener("click", function () { toggleEditorVisibility(); });
     resetScoreValueButton.addEventListener("click", function () { resetTeamScoreValues(); });
-    creditsButton.addEventListener("click", function () {toggleCreditsPanelVisibility(); });
+    creditsButton.addEventListener("click", function () { toggleCreditsPanelVisibility(); });
 }
 
 // Increase team score values
 // PARAM 1: The selected team
 function increaseTeamScoreValues(teamSelected) {
-    
+
     if (teamSelected === 1) {
-        
+
         // If the team 1 value is less than 999
         // Increase the team 1 score value
         if (team1Score < 999) {
@@ -165,7 +165,7 @@ function increaseTeamScoreValues(teamSelected) {
     }
 
     else if (teamSelected === 2) {
-        
+
         // If the team 2 value is less than 999
         // Increase the team 2 score value
         if (team2Score < 999) {
@@ -195,9 +195,9 @@ function increaseTeamScoreValues(teamSelected) {
 // Decrease team score values
 // PARAM 1: The selected team
 function decreaseTeamScoreValues(teamSelected) {
-    
+
     if (teamSelected === 1) {
-        
+
         // If the team 1 score value is greater than -999
         // Decrease the team 1 score value
         if (team1Score > -999) {
@@ -220,7 +220,7 @@ function decreaseTeamScoreValues(teamSelected) {
     }
 
     else if (teamSelected === 2) {
-        
+
         // If the team 2 score value is greater than -999
         // Decrease the team 2 score value
         if (team2Score > -999) {
@@ -260,7 +260,7 @@ function resetTeamScoreValues() {
 // Update team score display elements
 // PARAM 1: The team display element to update
 function updateTeamScoreDisplayElements(selectedTeam) {
-    
+
     // Depending on the selected team
     // Update their display elements
     switch (selectedTeam) {
@@ -280,58 +280,43 @@ function updateTeamScoreDisplayElements(selectedTeam) {
 }
 
 // Toggle the visiblity of the editor
-function toggleEditorVisibility()
-{
+function toggleEditorVisibility() {
     // If the editor is visible
     // Hide the editor
-    if (isEditorVisible === true)
-    {
+    if (isEditorVisible === true) {
         hideEditor();
     }
 
     // If the editor is not visible
     // Show the editor
-    else if (isEditorVisible === false)
-    {
+    else if (isEditorVisible === false) {
         showEditor();
     }
 }
 
 // Hide the editor
-function hideEditor()
-{
+function hideEditor() {
     customizeButton.innerHTML = "Customize";
     isEditorVisible = false;
 
     editorPanelRef.style.bottom = "-500px";
 
-    // Set the size of the team score elements to be their default values
-    team1ScoreText.style.fontSize = team1ScoreTextDefaultFontSize + "px";
-    team2ScoreText.style.fontSize = team2ScoreTextDefaultFontSize + "px";
-
-    // Set the top padding val of the team title div ref to be
-    // the smaller value
-    teamTitleDivRef.style.paddingTop = teamTitleDivDefaultTopPaddingValue + "px";
+    // Restore scoreboard content sizes
+    restoreScoreboardContentSizes();
 }
 
 // Show the editor
-function showEditor()
-{
+function showEditor() {
     customizeButton.innerHTML = "Hide Customize Menu";
     isEditorVisible = true;
 
     editorPanelRef.style.bottom = "0px";
 
-    // Set the size of the team score elements to be their smaller values
-    team1ScoreText.style.fontSize = team1ScoreTextSmallerFontSize + "px";
-    team2ScoreText.style.fontSize = team2ScoreTextSmallerFontSize + "px";
-
-    // Set the top padding val of the team title div ref to be
-    // the smaller value
-    teamTitleDivRef.style.paddingTop = teamTitleDivSmallerTopPaddingValue + "px";
-
     // Hide the credits panel
     hideCreditsPanel();
+
+    // Shrink the scoreboard contents
+    shrinkScoreboarContents();
 }
 
 // Toggle credits panel visibility
@@ -352,6 +337,7 @@ function toggleCreditsPanelVisibility() {
 
 // Show the credits panel
 function showCreditsPanel() {
+
     isCreditsPanelVisible = true;
     creditsButton.innerHTML = "Hide Credits";
 
@@ -359,12 +345,44 @@ function showCreditsPanel() {
 
     // Hide the editor
     hideEditor();
+
+    // Shrink the scoreboard contents
+    shrinkScoreboarContents();
 }
 
 // Hide the credits panel
 function hideCreditsPanel() {
+
     isCreditsPanelVisible = false;
     creditsButton.innerHTML = "Credits";
 
     creditsPanelRef.style.bottom = "-500px";
+
+    // Restore scoreboard content sizes
+    restoreScoreboardContentSizes();
+}
+
+// Shrink the scoreboard contents
+function shrinkScoreboarContents() {
+
+    // Set the size of the team score elements to be their smaller values
+    team1ScoreText.style.fontSize = team1ScoreTextSmallerFontSize + "px";
+    team2ScoreText.style.fontSize = team2ScoreTextSmallerFontSize + "px";
+
+    // Set the top padding val of the team title div ref to be
+    // the smaller value
+    teamTitleDivRef.style.paddingTop = teamTitleDivSmallerTopPaddingValue + "px";
+}
+
+
+// Restore scoreboard content sizes
+function restoreScoreboardContentSizes() {
+
+    // Set the size of the team score elements to be their default values
+    team1ScoreText.style.fontSize = team1ScoreTextDefaultFontSize + "px";
+    team2ScoreText.style.fontSize = team2ScoreTextDefaultFontSize + "px";
+
+    // Set the top padding val of the team title div ref to be
+    // the smaller value
+    teamTitleDivRef.style.paddingTop = teamTitleDivDefaultTopPaddingValue + "px";
 }
