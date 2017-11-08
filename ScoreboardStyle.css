@@ -39,6 +39,11 @@
     text-align: center;
 }
 
+.TitleSection h1
+{
+    text-align: center;
+}
+
 .ScoreboardContent
 {
     height: 92vh;

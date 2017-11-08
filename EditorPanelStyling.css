@@ -4,13 +4,13 @@
     position: fixed;
     z-index: 99;
 
-    box-shadow: 0px -2px 5px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px -3px 7px 5px rgba(0, 0, 0, 0.8);
     background-color: white;
 
     overflow: hidden;
     width: 100%;
     bottom: 0px;
-    height: 300px;
+    height: 360px;
 }
 
 .EditorSection #EditorTitle
@@ -37,7 +37,7 @@
     overflow-y: scroll;
 
     padding-left: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
 }
 
 .EditorSection .ControlSections .ToolSection
