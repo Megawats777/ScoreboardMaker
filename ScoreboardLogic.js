@@ -16,6 +16,8 @@ var teamScoreDecreaseInterval = 1;
 // Editor status variables
 var isEditorVisible = false;
 
+// Credits status variables
+var isCreditsPanelVisible = false;
 
 /*--Document element references--*/
 
@@ -39,10 +41,13 @@ var resetScoreValueButton;
 
 // Overhead buttons
 var customizeButton;
-
+var creditsButton;
 
 // Editor panel properties
 var editorPanelRef;
+
+// Credits panel properties
+var creditsPanelRef;
 
 // When the page loads
 // Call the initialize function
@@ -67,6 +72,10 @@ function initialize() {
     hideEditor();
 
     // showEditor();
+
+    // Hide the credits panel
+    hideCreditsPanel();
+
 
     // Set the default font size for the score text elements
     var styleSheetFontSize = window.getComputedStyle(team1ScoreText, null).getPropertyValue("font-size");
@@ -94,15 +103,18 @@ function getDocumentReferences() {
     scoreDecreaseButtons[0] = document.getElementById("Team1ScoreDecreaseButton");
     scoreDecreaseButtons[1] = document.getElementById("Team2ScoreDecreaseButton");
 
-    resetScoreValueButton = document.getElementById("ResetScoreValueButton");
-
+    
 
     // Get the overhead buttons
     customizeButton = document.getElementById("CustomizeButton");
-
+    resetScoreValueButton = document.getElementById("ResetScoreValueButton");
+    creditsButton = document.getElementById("CreditsButton");
 
     // Get the editor panel
     editorPanelRef = document.getElementById("EditorPanel");
+
+    // Get the credits panel
+    creditsPanelRef = document.getElementById("CreditsPanel");
 
     // Get the team title div reference
     teamTitleDivRef = document.getElementById("TeamTitles");
@@ -118,11 +130,11 @@ function bindFunctionCalls() {
     scoreDecreaseButtons[0].addEventListener("click", function () { decreaseTeamScoreValues(1); });
     scoreDecreaseButtons[1].addEventListener("click", function () { decreaseTeamScoreValues(2); });
 
-    resetScoreValueButton.addEventListener("click", function () { resetTeamScoreValues(); });
-
-
+    
     // Bind functions to the overhead buttons
     customizeButton.addEventListener("click", function() { toggleEditorVisibility(); });
+    resetScoreValueButton.addEventListener("click", function () { resetTeamScoreValues(); });
+    creditsButton.addEventListener("click", function () {toggleCreditsPanelVisibility(); });
 }
 
 // Increase team score values
@@ -275,8 +287,6 @@ function toggleEditorVisibility()
     if (isEditorVisible === true)
     {
         hideEditor();
-        customizeButton.innerHTML = "Customize";
-        isEditorVisible = false;
     }
 
     // If the editor is not visible
@@ -284,14 +294,15 @@ function toggleEditorVisibility()
     else if (isEditorVisible === false)
     {
         showEditor();
-        customizeButton.innerHTML = "Hide Customize Menu";
-        isEditorVisible = true;
     }
 }
 
 // Hide the editor
 function hideEditor()
 {
+    customizeButton.innerHTML = "Customize";
+    isEditorVisible = false;
+
     editorPanelRef.style.bottom = "-500px";
 
     // Set the size of the team score elements to be their default values
@@ -306,6 +317,9 @@ function hideEditor()
 // Show the editor
 function showEditor()
 {
+    customizeButton.innerHTML = "Hide Customize Menu";
+    isEditorVisible = true;
+
     editorPanelRef.style.bottom = "0px";
 
     // Set the size of the team score elements to be their smaller values
@@ -315,4 +329,42 @@ function showEditor()
     // Set the top padding val of the team title div ref to be
     // the smaller value
     teamTitleDivRef.style.paddingTop = teamTitleDivSmallerTopPaddingValue + "px";
+
+    // Hide the credits panel
+    hideCreditsPanel();
+}
+
+// Toggle credits panel visibility
+function toggleCreditsPanelVisibility() {
+
+    // If the credits panel is visible
+    // Hide the credits panel
+    if (isCreditsPanelVisible === true) {
+        hideCreditsPanel();
+    }
+
+    // If the credits panel is not visible
+    // Show the credits panel
+    else if (isCreditsPanelVisible === false) {
+        showCreditsPanel();
+    }
+}
+
+// Show the credits panel
+function showCreditsPanel() {
+    isCreditsPanelVisible = true;
+    creditsButton.innerHTML = "Hide Credits";
+
+    creditsPanelRef.style.bottom = "0px";
+
+    // Hide the editor
+    hideEditor();
+}
+
+// Hide the credits panel
+function hideCreditsPanel() {
+    isCreditsPanelVisible = false;
+    creditsButton.innerHTML = "Credits";
+
+    creditsPanelRef.style.bottom = "-500px";
 }
