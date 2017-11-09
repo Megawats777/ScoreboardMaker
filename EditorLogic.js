@@ -228,10 +228,11 @@ function EDITOR_applyColourThemeChanges() {
             selectedButtonBorderColour = "#F57F17";
             break;
 
+        // Runner Red Selection
         case 3:
-            selectedBackgroundColour = "rgba(40, 40, 40, 1)";
-            selectedTextColour = "#F57F17";
-            selectedButtonBorderColour = "#F57F17";
+            selectedBackgroundColour = "white";
+            selectedTextColour = "#B71C1C";
+            selectedButtonBorderColour = "#B71C1C";
             break;
 
 

@@ -21,8 +21,8 @@ Theme: Amber
 Theme: Runner Red
     ID: 3
     Background Colour: White
-    Text Colour: Red type colour
-    Button Border Colour: Red type colour
+    Text Colour: #B71C1C
+    Button Border Colour: #B71C1C
 
 Theme: American Diner
     ID: 4
