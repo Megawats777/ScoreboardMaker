@@ -228,20 +228,26 @@ function EDITOR_applyColourThemeChanges() {
             selectedButtonBorderColour = "#F57F17";
             break;
 
-        // Runner Red selection
+        // Runner Red theme selection
         case 3:
             selectedBackgroundColour = "white";
             selectedTextColour = "#B71C1C";
             selectedButtonBorderColour = "#B71C1C";
             break;
 
-        // American Diner selection
+        // American Diner theme selection
         case 4:
             selectedBackgroundColour = "#00897B";
             selectedTextColour = "white";
             selectedButtonBorderColour = "#F06292";
             break;
 
+        // Icarus theme selection
+        case 5:
+            selectedBackgroundColour = "#F06292";
+            selectedTextColour = "#FAFAFA";
+            selectedButtonBorderColour = "rgba(51, 51, 51, 1)";
+            break;
 
         default:
             selectedBackgroundColour = "white";

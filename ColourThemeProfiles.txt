@@ -32,6 +32,6 @@ Theme: American Diner
 
 Theme: Icarus
     ID: 5
-    Background Colour: Pink type colour
-    Text Colour: Orange type colour
-    Button Border Colour: Orange type colour
+    Background Colour: #F06292
+    Text Colour: #FAFAFA
+    Button Border Colour: rgba(51, 51, 51, 1)
