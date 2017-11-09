@@ -1,3 +1,13 @@
+/*
+Creator: James Daniel Semilla
+Date: November 9, 2017
+File type: JS
+Desc: Handles all the logic regarding the functionality of the scoreboard and the
+      overhead buttons. Also acts as a container for the scoreboard elements
+*/
+
+
+
 // Team title div section reference and properties
 var teamTitleDivRef;
 var teamTitleDivDefaultTopPaddingValue;
