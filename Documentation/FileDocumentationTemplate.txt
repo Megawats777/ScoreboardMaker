@@ -1,0 +1,17 @@
+// Html files
+Creator: James Daniel Semilla
+Date: November 9, 2017
+File type: HTML
+Desc: 
+
+// Css files
+Creator: James Daniel Semilla
+Date: November 9, 2017
+File type: CSS
+Desc:
+
+// Javascript files
+Creator: James Daniel Semilla
+Date: November 9, 2017
+File type: JS
+Desc: 
