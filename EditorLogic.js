@@ -228,6 +228,13 @@ function EDITOR_applyColourThemeChanges() {
             selectedButtonBorderColour = "#F57F17";
             break;
 
+        case 3:
+            selectedBackgroundColour = "rgba(40, 40, 40, 1)";
+            selectedTextColour = "#F57F17";
+            selectedButtonBorderColour = "#F57F17";
+            break;
+
+
         default:
             selectedBackgroundColour = "white";
             selectedTextColour = "rgba(51, 51, 51, 1)";
