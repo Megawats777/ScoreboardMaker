@@ -176,6 +176,18 @@ function EDITOR_setTextFontFromDropdownList(selectionNum, editedTextElement) {
             editedTextElement.style.fontFamily = "Saira Semi Condensed, sans-serif";
             break;
 
+        case 3:
+            editedTextElement.style.fontFamily = "Roboto Slab, serif";
+            break;
+
+        case 4:
+            editedTextElement.style.fontFamily = "Indie Flower, cursive";
+            break;
+
+        case 5:
+            editedTextElement.style.fontFamily = "Lobster, cursive";
+            break;
+
         default:
             editedTextElement.style.fontFamily = "Oswald, sans-serif";
             break;
