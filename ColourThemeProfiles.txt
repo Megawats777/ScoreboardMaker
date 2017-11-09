@@ -8,12 +8,30 @@ Theme: Light
 
 Theme: Dark
     ID: 1
-    Background Colour: Black
-    Text Colour: Blue type colour
-    Button Border Colour: White
+    Background Colour: rgba(40, 40, 40, 1)
+    Text Colour: #2196F3
+    Button Border Colour: #2196F3
 
 Theme: Amber
     ID: 2
-    Background Colour: Orange type colour
-    Text Colour: White
-    Button Border Colour: White
+    Background Colour: rgba(40, 40, 40, 1)
+    Text Colour: #F57F17
+    Button Border Colour: #F57F17
+
+Theme: Runner Red
+    ID: 3
+    Background Colour: White
+    Text Colour: Red type colour
+    Button Border Colour: Red type colour
+
+Theme: American Diner
+    ID: 4
+    Background Colour: Teal type colour
+    Text Colour: rgba(51, 51, 51, 1)
+    Button Border Colour: Black
+
+Theme: Icarus
+    ID: 5
+    Background Colour: Pink type colour
+    Text Colour: Orange type colour
+    Button Border Colour: Orange type colour
