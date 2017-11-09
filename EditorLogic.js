@@ -262,6 +262,26 @@ function EDITOR_applyScoreIntervalChanges() {
             teamScoreIncreaseInterval = 10;
             break;
 
+        case 3:
+            teamScoreIncreaseInterval = 15;
+            break;
+
+        case 4:
+            teamScoreIncreaseInterval = 20;
+            break;
+
+        case 5:
+            teamScoreIncreaseInterval = 25;
+            break;
+
+        case 6:
+            teamScoreIncreaseInterval = 30;
+            break;
+
+        case 7:
+            teamScoreIncreaseInterval = 100;
+            break;
+
         default:
             teamScoreIncreaseInterval = 1;
             break;
@@ -281,6 +301,26 @@ function EDITOR_applyScoreIntervalChanges() {
 
         case 2:
             teamScoreDecreaseInterval = 10;
+            break;
+
+        case 3:
+            teamScoreDecreaseInterval = 15;
+            break;
+
+        case 4:
+            teamScoreDecreaseInterval = 20;
+            break;
+
+        case 5:
+            teamScoreDecreaseInterval = 25;
+            break;
+
+        case 6:
+            teamScoreDecreaseInterval = 30;
+            break;
+
+        case 7:
+            teamScoreDecreaseInterval = 100;
             break;
 
         default:
