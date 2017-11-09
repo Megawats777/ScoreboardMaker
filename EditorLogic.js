@@ -1,3 +1,11 @@
+/*
+Creator: James Daniel Semilla
+Date: November 9, 2017
+File type: JS
+Desc: Handles the logic and functionality of the editor. Makes the user's inputs
+      do something with the scoreboard :)
+*/
+
 
 // Reference to background
 var EDITOR_scoreboardBackgroundRef;
