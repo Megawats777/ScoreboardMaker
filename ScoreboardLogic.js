@@ -132,9 +132,20 @@ function bindFunctionCalls() {
 
 
     // Bind functions to the overhead buttons
-    customizeButton.addEventListener("click", function () { toggleEditorVisibility(); });
-    resetScoreValueButton.addEventListener("click", function () { resetTeamScoreValues(); });
-    creditsButton.addEventListener("click", function () { toggleCreditsPanelVisibility(); });
+    customizeButton.addEventListener("click", function () {
+        toggleEditorVisibility();
+        document.activeElement.blur();
+    });
+
+    resetScoreValueButton.addEventListener("click", function () {
+        resetTeamScoreValues();
+        document.activeElement.blur();
+    });
+
+    creditsButton.addEventListener("click", function () {
+        toggleCreditsPanelVisibility();
+        document.activeElement.blur();
+    });
 }
 
 // Increase team score values
@@ -316,7 +327,7 @@ function showEditor() {
     hideCreditsPanel();
 
     // Shrink the scoreboard contents
-    shrinkScoreboarContents();
+    shrinkScoreboardContents();
 }
 
 // Toggle credits panel visibility
@@ -347,7 +358,7 @@ function showCreditsPanel() {
     hideEditor();
 
     // Shrink the scoreboard contents
-    shrinkScoreboarContents();
+    shrinkScoreboardContents();
 }
 
 // Hide the credits panel
@@ -363,7 +374,7 @@ function hideCreditsPanel() {
 }
 
 // Shrink the scoreboard contents
-function shrinkScoreboarContents() {
+function shrinkScoreboardContents() {
 
     // Set the size of the team score elements to be their smaller values
     team1ScoreText.style.fontSize = team1ScoreTextSmallerFontSize + "px";
