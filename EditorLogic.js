@@ -228,11 +228,18 @@ function EDITOR_applyColourThemeChanges() {
             selectedButtonBorderColour = "#F57F17";
             break;
 
-        // Runner Red Selection
+        // Runner Red selection
         case 3:
             selectedBackgroundColour = "white";
             selectedTextColour = "#B71C1C";
             selectedButtonBorderColour = "#B71C1C";
+            break;
+
+        // American Diner selection
+        case 4:
+            selectedBackgroundColour = "#00897B";
+            selectedTextColour = "white";
+            selectedButtonBorderColour = "#F06292";
             break;
 
 
